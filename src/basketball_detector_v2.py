@@ -9,7 +9,7 @@ from clustering import Clustering
 from court_mapper import CourtMapper
 from vision_api import VisionAPI
 
-class BasketballDetector:
+class BasketballDetector_V2:
     def __init__(self, model_path, device, team_colors):
         self.device = device
         self.model = YOLO(model_path).to(device)
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     # Example dynamic team colors
     team_colors = ("white", "neon green")
 
-    detector = BasketballDetector(
+    detector = BasketballDetector_V2(
         model_path="yolov10m.pt",
         device="cuda",
         team_colors=team_colors
